@@ -2,7 +2,7 @@
   "name": "@eonix/configloader",
   "description": "A component to load configs as JSON to have one build for multiple environments",
   "private": false,
-  "version": "1.1.9",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
