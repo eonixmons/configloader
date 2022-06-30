@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "prop-types": "^15.8.1",
+    "prop-types": "^15.7.0 || ^15.8.1",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
