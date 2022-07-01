@@ -2,7 +2,14 @@
   "name": "@eonix/configloader",
   "description": "A component to load configs as JSON to have one build for multiple environments",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eonixmons/configloader.git",
+    "directory": "src/lib"
+  },
+  "keywords": ["eonix", "config", "loader", "json", "react", "component"],
+  "homepage": "https://github.com/eonixmons/configloader#readme",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
