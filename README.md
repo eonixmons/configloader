@@ -30,10 +30,48 @@ The url used to load the configs json file
 
 ### Using the configs
 
-There is 2 ways of using the loaded configs built in teh components but you can use some other by using the `onLoadedConfigs` callback
+
+
+There is 3 ways of using the loaded configs built in teh components but you can use some other by using the `onLoadedConfigs` callback
 
 * Using the context `ConfigsContext` that contain the loaded configs object
+    ```jsx
+    import { ConfigsContext } from '@eonix/configloader';
+
+    const App = () => {
+        const config = useContext(ConfigsContext);
+
+        return <>{/* ... */}</>
+    }
+    ```
 * using the `config` object exported from the component
+* using the `useConfig` hook for functional components
+    ```jsx
+    import { useConfig } from '@eonix/configloader';
+    
+    const App = () => {
+        const config = useConfig();
+    
+        return <>{/* ... */}</>    
+    }
+    ```
+  using Typescript
+    ```tsx
+    import { useConfig } from '@eonix/configloader';
+    import { useMemo } from "react";
+  
+    // define your own config type
+    type AppConfig = { publicKey: string };
+  
+    // create a custom hook that returns your typed config
+    export const useAppConfig = () => useConfig<AppConfig>();
+  
+    const App = () => {
+        const config = useAppConfig();
+    
+        return <>{/* ... */}</>
+    }
+    ```
 
 ## Auteurs
 * **[Kevin Goyvaerts](https://github.com/mrdelik) for [Eonix](https://eonix.be)**
