@@ -58,7 +58,6 @@ There is 3 ways of using the loaded configs built in teh components but you can 
   using Typescript
     ```tsx
     import { useConfig } from '@eonix/configloader';
-    import { useMemo } from "react";
   
     // define your own config type
     type AppConfig = { publicKey: string };
