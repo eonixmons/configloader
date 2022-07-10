@@ -36,6 +36,7 @@ There is 3 ways of using the loaded configs built in teh components but you can 
 
 * Using the context `ConfigsContext` that contain the loaded configs object
     ```jsx
+    import { useContext } from 'react';
     import { ConfigsContext } from '@eonix/configloader';
 
     const App = () => {
@@ -46,21 +47,40 @@ There is 3 ways of using the loaded configs built in teh components but you can 
     ```
 * using the `config` object exported from the component
 * using the `useConfig` hook for functional components
+
+  * Using Javascript and JSDoc
     ```jsx
     import { useConfig } from '@eonix/configloader';
     
-    const App = () => {
-        const config = useConfig();
+    /**
+     * Set the return type to map your config
+     * 
+     * @returns {{
+     *     publicKey: string,
+     *     api: {
+     *         url: string
+     *     }
+     * }}
+     */
+    const useAppConfig = () => useConfig();
     
-        return <>{/* ... */}</>    
+    const App = () => {
+        const config = useAppConfig();
+    
+        return <>{/* ... */}</>
     }
     ```
-  using Typescript
+  * Using Typescript
     ```tsx
     import { useConfig } from '@eonix/configloader';
   
     // define your own config type
-    type AppConfig = { publicKey: string };
+    type AppConfig = {
+        publicKey: string;
+        api: {
+            url: string;
+        };
+    };
   
     // create a custom hook that returns your typed config
     export const useAppConfig = () => useConfig<AppConfig>();
