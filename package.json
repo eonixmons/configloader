@@ -8,7 +8,14 @@
     "url": "https://github.com/eonixmons/configloader.git",
     "directory": "src/lib"
   },
-  "keywords": ["eonix", "config", "loader", "json", "react", "component"],
+  "keywords": [
+    "eonix",
+    "config",
+    "loader",
+    "json",
+    "react",
+    "component"
+  ],
   "homepage": "https://github.com/eonixmons/configloader#readme",
   "scripts": {
     "dev": "vite",
@@ -21,8 +28,8 @@
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
@@ -30,6 +37,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
+    "prettier": "^2.7.1",
     "typescript": "^4.6.3",
     "vite": "^2.9.9",
     "vite-plugin-dts": "^1.2.0"
